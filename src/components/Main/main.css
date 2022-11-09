@@ -253,7 +253,6 @@
   position: absolute;
   border: none;
   background: transparent;
-  left: 10px;
   font-size: 50px;
   color: #ece7e2;
   cursor: pointer;
@@ -1028,6 +1027,7 @@
   .main-image {
     height: auto;
   }
+
   .nav-container {
     height: 60px;
   }
@@ -1049,7 +1049,7 @@
   }
 
   .title {
-    font-size: 1.1rem;
+    font-size: .9rem;
     margin-top: 6rem;
     margin-left: 0;
     padding-left: 5rem;
@@ -1110,14 +1110,14 @@
   }
 
   .bottom-text {
-    font-size: 3.4rem;
+    font-size: 3.6rem;
     text-align: center;
-    margin-top: 12rem;
-    margin-bottom: 0;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
   }
 
   #pic1 {
-    margin-left: 18rem;
+    margin-left: 15rem;
   }
 
   #pic3 {

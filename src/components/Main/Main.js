@@ -125,7 +125,6 @@ const Main = () => {
                     end: "top 50%",
                     duration: 1.5,
                     ease: "sine.out",
-                    markers: true,
                     scrub: 1
             },
                 opacity: 0,
