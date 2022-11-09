@@ -17,7 +17,6 @@ import {
 } from '../../assets/images';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CSSPlugin } from 'gsap/CSSPlugin';
 
 
 const Main = () => {
@@ -54,7 +53,7 @@ const Main = () => {
     const subtitle = useRef(null);
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger, CSSPlugin);
+        gsap.registerPlugin(ScrollTrigger);
         const ctx = gsap.context(() => {
 
         const tlOne = gsap.timeline();
@@ -122,9 +121,11 @@ const Main = () => {
             gsap.from(".bottom-text", {
                 scrollTrigger: {
                     trigger: ".middle-text",
-                    start:"middle 5%",
+                    start:"top",
+                    end: "top 50%",
                     duration: 1.5,
                     ease: "sine.out",
+                    markers: true,
                     scrub: 1
             },
                 opacity: 0,
@@ -300,7 +301,8 @@ const Main = () => {
                     <Modal.Body>
                     </Modal.Body>
                 </Modal>
-            )}
+                )}
+            
         </section>    
     )
 }

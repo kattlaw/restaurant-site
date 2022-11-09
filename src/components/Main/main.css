@@ -3,13 +3,15 @@
 
 
 #main {
+  width: 100vw;
+  top: 0;
   overflow-x: hidden;
-  width: 100%;
 }
 
 #image1 {
   animation-delay: 0s;
   background-image: linear-gradient(rgba(65, 63, 63, 0.5), rgba(59, 59, 57, 0.5)), url('../../assets/images/bolognese.jpeg');
+
   }
 
 #image2 {
@@ -21,14 +23,14 @@
 #image3 {
   background-image:linear-gradient(rgba(92, 90, 90, 0.5), rgba(59, 59, 57, 0.5)),  url('../../assets/images/caprese1.jpeg');
   animation-delay: 10s;
- 
+
   }
 
 #image4 {
   background-image: linear-gradient(rgba(109, 107, 107, 0.5), rgba(59, 59, 57, 0.5)), url('../../assets/images/psto.jpeg');
   animation-delay: 15s;
-  max-width: 100%;
-  }
+
+}
 
 .main-image {
   width: 100%;
@@ -36,9 +38,10 @@
   left: 0;
   top: 0;
   bottom: 0;
+  right: 0;
   height: auto;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   animation: fade 20s infinite;
 }
@@ -236,12 +239,11 @@
 /*----MENU OVERLAY----*/
 
 .overlay {
+  width:100%;
   height: 100%;
-  width: 100%;
   position: fixed;
   z-index: 999999;
-  top: 0;
-  left: 0;
+
   background-color: #434745;
   overflow-x: hidden;
   transition: 0.5s;
@@ -260,7 +262,7 @@
 .overlay-content {
   position: relative;
   display: block;
-  top: 10%;
+  top:10%;
   width: 100%;
   text-align: center;
   color:#ece7e2;
@@ -343,13 +345,13 @@
 .welcome-content {
   background-color: #434745;
   background-image: url('../../assets/images/pattern.png');
-  max-width: 100%;
   width: 90%;
+  max-width:100%;
   z-index: 2;
   height: 620px;
   max-height: 100%;
   position: absolute;
-  left: 0%;
+  left: 0;
   margin-top: 3.7rem;
   padding-left: 0;
   overflow: visible;
@@ -421,7 +423,7 @@
   margin-top: 12rem;
   margin-bottom: 2rem;
   padding-bottom: 15rem;
-  padding-right: 15rem;
+ 
   z-index: 99999;
   position: absolute;
   overflow: hidden;
@@ -436,7 +438,7 @@
   font-weight: 100;
   position: relative;
   padding-top: 7rem;
-  margin-left: 5rem;
+  margin-left: 1rem;
   overflow: hidden;
 }
 
@@ -719,7 +721,7 @@
 
 /*----LARGE SCREENS-----*/
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .sidebar .social {
     visibility: hidden;
   }
@@ -728,6 +730,12 @@
     padding-left: 3rem;
   }
   
+
+.nav-links li:nth-of-type(1){
+  border-right: 0;
+
+}
+
   .title {
     padding-left: 5rem;
     font-size: 1.8rem;
@@ -769,11 +777,16 @@
   .welcome-content {
     margin-top: 1rem;
   }
+
   .welcome-content img {
     width: 90%;
     height: auto;
   }
 
+
+  .middle-content {
+    padding-right: 4.7rem;
+  }
   .middle-text {
     font-size: 6.7rem;
     margin-left: 1rem;
@@ -842,29 +855,15 @@
 /*----MEDIUM SCREENS----*/
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main-image {
-    height: 60%;
-  }
-
+ 
   .nav-container {
     height: 60px;
   }
 
-  .nav-links li:nth-of-type(2) {
+  .nav-links {
     display: none;
    }
   
-  .nav-links li:nth-of-type(1) {
-    display: none;
-   }
-  
-  .nav-links li:nth-of-type(3) {
-    border-right: none;
-    padding-bottom: 7px;
-    text-align: center;
-    width: 125px;
-   }
-
   .sidebar span:nth-of-type(1) {
     padding-top: 10rem;
   }
@@ -923,6 +922,11 @@
     padding-top: 1rem;
     margin-right: 1rem;
   }
+
+  .middle-content {
+    padding-right: 0rem;
+  }
+
 
   .middle-text {
     font-size: 5rem;
@@ -1019,34 +1023,21 @@
 
 /*----SMALL SCREENS----*/
 
-@media only screen and (min-width: 300px) and (max-width: 575px) 
-{
-  .main-image {
-    height: 60%;
-  }
+@media only screen and (min-width: 300px) and (max-width: 575px) {
 
+  .main-image {
+    height: auto;
+  }
   .nav-container {
     height: 60px;
   }
 
- .nav-links li:nth-of-type(2) {
-    display: none;
- }
-
- .nav-links li:nth-of-type(1) {
-    display: none;
- }
-
- .nav-links li:nth-of-type(3) {
-    border-right: none;
-    padding-bottom: 7px;
-    text-align: center;
-    width: 125px;
+ .nav-links {
+    visibility: hidden;
  }
 
   .sidebar span:nth-of-type(1) {
     padding-top: 8rem;
-   
   }
 
   .sidebar .social {
@@ -1059,7 +1050,7 @@
 
   .title {
     font-size: 1.1rem;
-    margin-top: 7rem;
+    margin-top: 6rem;
     margin-left: 0;
     padding-left: 5rem;
   }
@@ -1108,19 +1099,25 @@
     height: auto;
   }
 
+  .middle-content {
+    padding-right: 0;
+  }
+
   .middle-text {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-left: 1rem;
+    margin-top: 1rem;
   }
 
   .bottom-text {
-    font-size: 4.5rem;
-    margin-top: 15rem;
+    font-size: 3.4rem;
+    text-align: center;
+    margin-top: 12rem;
     margin-bottom: 0;
   }
 
   #pic1 {
-    margin-left: 21rem;
+    margin-left: 18rem;
   }
 
   #pic3 {

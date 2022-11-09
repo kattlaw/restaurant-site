@@ -103,7 +103,6 @@ const onSubmit = (data) => {
   console.log(data);
   alert(JSON.stringify(data))
 }
-
   return <div className="modal-body">{props.children}
             <form className="reserve-form" id="hook-form" onSubmit={handleSubmit(onSubmit)}>
                 <input 
