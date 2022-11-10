@@ -75,7 +75,7 @@
   padding-top:1rem;
   margin-bottom: -1rem;
   padding-left: 6rem;
-  font-family:'Lato';
+  font-family:'Lato', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   }
@@ -91,8 +91,7 @@
   padding-left: 6rem;
   font-family:serif;
   line-height: .89;
-  /*font-family: 'Waterfall', serif;*/
-  font-family:'Waterfall';
+  font-family:'Waterfall', serif;
   font-weight:500;
 }
   
@@ -265,7 +264,7 @@
   text-align: center;
   color: #ebdfd4;
   font-family:'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 1.7rem;
   padding-bottom: 0;
@@ -434,7 +433,7 @@
   z-index: 99999;
   font-size: 7.5rem;
   color: #ebdfd4;
-  font-family: 'Jomolhari';
+  font-family: 'Jomolhari', sans-serif;
   line-height: .87;
   font-weight: 100;
   position: relative;
@@ -495,7 +494,7 @@
   margin-top: 35rem;
   padding-bottom: 0;
   color:#ebdfd4;
-  font-family: 'Jomolhari';
+  font-family: 'Jomolhari', sans-serif;
   font-weight: 100;
   letter-spacing: -4px;
   line-height: .87;
@@ -544,7 +543,7 @@
   margin-bottom: 1.2rem;
   transform: translateY(-100%);
   overflow: hidden;
-  font-family:'Montserrat';
+  font-family:'Montserrat', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .5px;
@@ -1054,6 +1053,9 @@
     visibility: hidden;
   }
 
+  .overlay-content li {
+    padding: .7rem;
+  }
 
   .close {
     float: right;

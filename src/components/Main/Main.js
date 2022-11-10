@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useMemo, useLayoutEffect } from 'react';
+import { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import './main.css';
 import Modal from "../Modal";
 import { IoMenuOutline, IoLogoInstagram, IoClose } from 'react-icons/io5'
@@ -66,6 +66,7 @@ const Main = () => {
                 x: -1600,
                 ease: "sine.out"
             });
+
             tlOne.from(subtitle.current, {
                 duration: 1.5,
                 opacity: 0,
@@ -90,6 +91,7 @@ const Main = () => {
                 scale: 0,
                 ease: "sine.out",
             });
+
             tl.from(".middle-text", {
                 ease: "sine.out",
                 x: -1200,
@@ -106,6 +108,7 @@ const Main = () => {
                 yoyo: true,
                 repeatDelay: 0,
             });
+
             gsap.to("#pic2", {
                 y:"+=15",
                 ease: "sine.inOut",
@@ -114,6 +117,7 @@ const Main = () => {
                 yoyo: true,
                 repeatDelay: 0,
             });
+
             gsap.to("#pic3", {
                 y:"+=25",
                 ease: "sine.inOut",
@@ -143,7 +147,9 @@ const Main = () => {
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
+
             const timeline = gsap.timeline();
+
             timeline.from(menuRef.current, {
                 duration: 0.5,
                 opacity: 0,
@@ -167,16 +173,18 @@ const Main = () => {
                 ease: "power1.in",
                 y: 0,
             });
+
             timeline.from(".overlay-logo", {
                 duration: 0.3,
                 delay: 0.1,
                 opacity: 0,
                 ease: "power1.in",
                 x: -1600,
-            });
-            
+            });  
         })
+
         return () => ctx.revert();
+
     }, [menuOpen]);
 
     return ( 
@@ -200,7 +208,7 @@ const Main = () => {
             </div>
             {menuOpen && (
                 <section id="menu" className="overlay" ref={menuRef}>
-                    <button className="close" onClick={handleClick} ><IoClose /></button>
+                    <button className="close" onClick={handleClick}><IoClose /></button>
                     <div className="overlay-content">
                         <ul>
                             <li><a href="#main">Home</a></li>
