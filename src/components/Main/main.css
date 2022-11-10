@@ -10,7 +10,7 @@
 
 #image1 {
   animation-delay: 0s;
-  background-image: linear-gradient(rgba(65, 63, 63, 0.5), rgba(59, 59, 57, 0.5)), url('../../assets/images/bolognese.jpeg');
+  background-image: linear-gradient(rgba(106, 104, 104, 0.5), rgba(59, 59, 57, 0.5)), url('../../assets/images/bolognese.jpeg');
 
   }
 
@@ -239,37 +239,37 @@
 /*----MENU OVERLAY----*/
 
 .overlay {
-  width:100%;
-  height: 100%;
+  width:100vw;
+  height: 100vh;
   position: fixed;
   z-index: 999999;
-
   background-color: #434745;
+  background-image: url('../../assets/images/pattern.png');
   overflow-x: hidden;
-  transition: 0.5s;
 }
 
 .close {
   position: absolute;
   border: none;
   background: transparent;
-  font-size: 50px;
+  font-size: 35px;
   color: #ece7e2;
   cursor: pointer;
+  padding: 10px 15px;
 }
 
 .overlay-content {
   position: relative;
   display: block;
-  top:10%;
   width: 100%;
   text-align: center;
-  color:#ece7e2;
+  color: #ebdfd4;
   font-family:'Montserrat', sans-serif;
   font-weight: 100;
   text-transform: uppercase;
   font-size: 1.7rem;
   padding-bottom: 0;
+  margin-top: 4.5rem;
 }
 
 .overlay-content ul {
@@ -292,7 +292,7 @@
 
 .overlay-content li a  {
   text-decoration: none;
-  color:#ece7e2;
+  color: #ebdfd4;;
 }
 
 .overlay-content li a:hover {
@@ -300,18 +300,19 @@
 }
 
 .overlay-reserve {
-  background-color: #ece7e2;
+  background-color: #ebdfd4;
   color: #434745;
   padding: .5rem;
   font-size:.9rem;
   text-transform: uppercase;
   margin-bottom: 4rem;
-  border: .5px solid #ece7e2;
-  font-family:'Montserrat';
+  border: .5px solid #ebdfd4;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
   width: 11rem;
   padding-top:.8rem;
   padding-bottom: .8rem;
-  font-weight: 300;
+  
   cursor: pointer;
   word-spacing: 3px;
 }
@@ -324,12 +325,13 @@
 .overlay-logo {
   text-align: center;
   margin-top: 0;
+  margin-bottom: 0;
   font-size: 4rem;
   font-weight: 300;
 }
 
 .overlay-logo span {
-  color:#272626;
+  color:#636664;
 }
 
 .toggle-line {
@@ -1030,34 +1032,50 @@
 
   .nav-container {
     height: 60px;
+    width: 100%;
   }
 
- .nav-links {
-    visibility: hidden;
- }
-
-  .sidebar span:nth-of-type(1) {
-    padding-top: 8rem;
-  }
-
-  .sidebar .social {
-    visibility: hidden;
+  .nav-container button {
+   float: right;
+   margin-right: 10px;
+   padding: 0;
   }
 
   .logo {
-    padding-left: 2rem;
+    margin-left: 10px;
+    padding-left: 0;
   }
 
+ .nav-links li {
+    visibility: hidden;
+ }
+
+  .sidebar {
+    visibility: hidden;
+  }
+
+
+  .close {
+    float: right;
+    position: relative;
+    margin: 5px;
+    padding: 0;
+    margin-right: 0;
+  }
+  
   .title {
-    font-size: .9rem;
+    font-size: 1rem;
+    text-align: center;
     margin-top: 6rem;
-    margin-left: 0;
-    padding-left: 5rem;
+    padding-left: 0;
+    font-weight: 500;
   }
   
   .subtitle {
-    font-size: 5.5rem;
-    padding-left: 5rem;
+    font-size: 7rem;
+    text-align: center;
+    padding-left: 0rem;
+    margin-bottom: 5rem;
   }
   
   .welcome-content {

@@ -135,7 +135,8 @@ const onSubmit = (data) => {
                   })}
                 />
                 {errors.Email?.type === "required" && <span className="required">Email is required</span>}        
-                <div className="date-time">
+                
+                  <span class="date-time">Date
                   <input
                     className="date-control"
                     type="date"
@@ -144,6 +145,8 @@ const onSubmit = (data) => {
                       required: true
                     })}
                   /> 
+                </span>
+                <span class="date-time">Time
                   <select 
                     className="select-time"
                     name="Time"
@@ -202,7 +205,7 @@ const onSubmit = (data) => {
                     <option value="8:30 PM">8:30 PM</option>
                     <option value="8:45 PM">8:45 PM</option>
                   </select>
-                </div>
+                </span>
               </form>
                 <div className="reserve-people">
                     <button className="decrease" onClick={decrement}><IoPersonRemoveOutline></IoPersonRemoveOutline></button>

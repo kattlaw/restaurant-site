@@ -16,7 +16,7 @@
   
   .modal-content {
     width: 50%;
-    height: 62%;
+    height: 65%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -130,10 +130,10 @@
   }
 
   .date-time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    padding-left: 1rem;
+    margin-left: .5rem;
+    width: 90%;
+    font-family: 'Montserrat';
   }
 
   .date-control {
@@ -167,7 +167,7 @@
   .count {
     font-size: 2.5rem;
     padding: 0;
-    margin: 0;
+    align-self: center;
     font-family: 'Montserrat';
   }
 
@@ -186,8 +186,20 @@
 
   @media only screen and (min-width: 300px) and (max-width: 575px) {
     .modal-content {
-      width:80%;
-
+      width:90%;
+      height:68%;
     }
-  
+
+    .date-control {
+      width: 45%;
+    }
+
+    .select-time {
+      width: 35%;
+    }
+
+    .count {
+      padding-left: 1rem;
+    }
+
   }

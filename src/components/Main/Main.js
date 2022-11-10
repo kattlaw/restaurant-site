@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo, useLayoutEffect } from 'react';
 import './main.css';
 import Modal from "../Modal";
-import { IoMenuOutline, IoLogoInstagram } from 'react-icons/io5'
+import { IoMenuOutline, IoLogoInstagram, IoClose } from 'react-icons/io5'
 import { AiFillLinkedin, AiOutlineFacebook, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
 import {
     plain,
@@ -21,11 +21,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Main = () => {
 
-    //open hamburger menu
+    //open hamburger overlay menu
     const [menuOpen, setOpen] = useState(false);
     const handleClick = () => {
         setOpen(current => !current);
-    }
+    };
     
     //open reservation modal
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -51,23 +51,28 @@ const Main = () => {
     //gsap animation
     const title = useRef(null);
     const subtitle = useRef(null);
-
+    const menuRef = useRef(null);
+ 
     useEffect(() => {
+       
         gsap.registerPlugin(ScrollTrigger);
         const ctx = gsap.context(() => {
 
         const tlOne = gsap.timeline();
 
             tlOne.from(title.current, {
-                duration: 1,
+                duration: 1.5,
                 opacity: 0,
-                x: -1600
+                x: -1600,
+                ease: "sine.out"
             });
             tlOne.from(subtitle.current, {
-                duration: 1,
+                duration: 1.5,
                 opacity: 0,
-                x: -1600
+                x: -1600,
+                ease: "sine.out"
             }, "<");
+        
 
         const tl= gsap.timeline({
             scrollTrigger: {
@@ -133,8 +138,46 @@ const Main = () => {
         })
     
     return () => ctx.revert();
-    
+   
     }, []);
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            const timeline = gsap.timeline();
+            timeline.from(menuRef.current, {
+                duration: 0.5,
+                opacity: 0,
+                x: -1600,
+                ease: "sine.out",
+            }, menuRef);
+
+            timeline.from(".overlay a", {
+                duration: 0.5,
+                delay: 0.3,
+                opacity: 0,
+                stagger: 0.2,
+                ease: "power1.in",
+                y: 0,       
+            });
+
+           timeline.from(".overlay-reserve", {
+                duration: 0.5,
+                delay: 0.2,
+                opacity: 0,
+                ease: "power1.in",
+                y: 0,
+            });
+            timeline.from(".overlay-logo", {
+                duration: 0.3,
+                delay: 0.1,
+                opacity: 0,
+                ease: "power1.in",
+                x: -1600,
+            });
+            
+        })
+        return () => ctx.revert();
+    }, [menuOpen]);
 
     return ( 
         <section id="main">
@@ -150,22 +193,22 @@ const Main = () => {
                     style={{fontSize: textSize, transition:"1s"}}>
                     <span> ZIA </span> MIA </div>
                 <ul className="nav-links">
-                    <li><a href="main">252-222-5555 </a></li>
-                    <li style={{borderLeft:"0", borderRight:"0"}}><a href="main">Order Online</a></li>
+                    <li><a href="#main">252-222-5555 </a></li>
+                    <li style={{borderLeft:"0", borderRight:"0"}}><a href="#main">Order Online</a></li>
                     <li><a href="#" onClick={openReserve}>Reservations</a></li>
                 </ul>
             </div>
             {menuOpen && (
-                <section id="menu" className="overlay">
-                    <button className="close" onClick={handleClick}>&times;</button>
+                <section id="menu" className="overlay" ref={menuRef}>
+                    <button className="close" onClick={handleClick} ><IoClose /></button>
                     <div className="overlay-content">
                         <ul>
-                            <li><a href="main">Home</a></li>
-                            <li><a href="main">About</a></li>
-                            <li><a href="main">Order Online</a></li>
+                            <li><a href="#main">Home</a></li>
+                            <li><a href="#main">About</a></li>
+                            <li><a href="#main">Order Online</a></li>
                             <li><a href="#" onClick={openReserve}>Reservations</a></li>
-                            <li><a href="main">Menu</a></li>
-                            <li><a href="main">Gallery</a></li>
+                            <li><a href="#main">Menu</a></li>
+                            <li><a href="#main">Gallery</a></li>
                         </ul>
                         <button className="overlay-reserve" onClick={openReserve}>Book a Table</button>
                         <div className="overlay-logo">
@@ -260,7 +303,7 @@ const Main = () => {
                             </div>
                             <div className="footer-logo">
                               <ul className="footer-menu">
-                                <li><a href="main">Home</a></li>
+                                <li><a href="#main">Home</a></li>
                                 <li>About</li>
                                 <li>Order Online</li>
                                 <li><a href="#" onClick={openReserve}>
@@ -272,10 +315,10 @@ const Main = () => {
                                 2122 South Main
                                 <span>Boston, MA 22201</span>
                                 Copyright 2022
-                                <button className="footer-button" href="main">
+                                <button className="footer-button" href="#main">
                                Order
                                 </button>
-                                <button className="footer-button" href="main" onClick={openReserve}>
+                                <button className="footer-button" href="#" onClick={openReserve}>
                                Reserve
                                 </button>
                             </div>
