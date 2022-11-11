@@ -167,7 +167,7 @@
   display: block;
   color: #ece7e2;
   text-decoration: none;
-  padding: 18px 22px;
+  padding: 18.3px 22px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -299,19 +299,18 @@
 }
 
 .overlay-reserve {
-  background-color: #ebdfd4;
+  background-color: #eed9c6;
   color: #434745;
   padding: .5rem;
   font-size:.9rem;
   text-transform: uppercase;
   margin-bottom: 4rem;
-  border: .5px solid #ebdfd4;
+  border: .5px solid #eed9c6;
   font-weight: 500;
   font-family: "Lato", sans-serif;
   width: 11rem;
   padding-top:.8rem;
   padding-bottom: .8rem;
-  
   cursor: pointer;
   word-spacing: 3px;
 }
@@ -423,7 +422,7 @@
   margin-top: 12rem;
   margin-bottom: 2rem;
   padding-bottom: 15rem;
- 
+  padding-right: 6rem;
   z-index: 99999;
   position: absolute;
   overflow: hidden;
@@ -730,11 +729,9 @@
     padding-left: 3rem;
   }
   
-
-.nav-links li:nth-of-type(1){
-  border-right: 0;
-
-}
+  .nav-links li:nth-of-type(1)  {
+    border-right: 0;
+  }
 
   .title {
     padding-left: 5rem;
@@ -783,10 +780,10 @@
     height: auto;
   }
 
-
   .middle-content {
     padding-right: 4.7rem;
   }
+
   .middle-text {
     font-size: 6.7rem;
     margin-left: 1rem;
@@ -815,6 +812,7 @@
 
   .menu img {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .cannoli img {
@@ -825,8 +823,9 @@
   }
 
   .footer {
-    margin-top: 0;
+    margin-top: -.56rem;
   }
+
   .footer-content {
     font-size: 12px;
     margin-top: 0;
@@ -862,7 +861,7 @@
 
   .nav-links {
     display: none;
-   }
+  }
   
   .sidebar span:nth-of-type(1) {
     padding-top: 10rem;
@@ -871,6 +870,7 @@
   .sidebar .social {
     visibility: hidden;
   }
+
   .logo {
     padding-left: 2.5rem;
   }
@@ -888,7 +888,7 @@
   }
 
   .mission {
-   padding-left: 1rem;
+    padding-left: 1rem;
   }
 
   .statement {
@@ -927,7 +927,6 @@
     padding-right: 0rem;
   }
 
-
   .middle-text {
     font-size: 5rem;
     margin-left: 1rem;
@@ -951,6 +950,7 @@
   #pic2 {
     padding-top: 18rem;
   }
+
   #pic3 {
     float: right;
     margin-left: 1rem;
@@ -964,6 +964,7 @@
 
   .menu img {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .cannoli img {
@@ -974,9 +975,10 @@
   }
 
   .footer {
-    margin-top: 0;
+    margin-top: -.57rem;
     padding-top: 3rem;
   }
+  
   .footer-content {
     font-size: 15px;
     margin-top: 0;
@@ -1154,15 +1156,29 @@
 
   .menu img {
     margin-top: .1rem;
+    margin-bottom: 0;
   }
 
   .cannoli img {
     display: none;
   }
 
+  .dessert {
+    margin-bottom: 0;
+  }
+
+  .image-overlay {
+    font-size: 21px;
+    font-weight: 900;
+    color:#ebdfd4;
+    text-shadow: none;
+    font-family:'Jomolhari', sans-serif;
+    margin-bottom: 0;
+  }
+
   .footer {
     padding-top: 3rem;
-    margin-top: 0;
+    margin-top: -1rem;
 
   }
   .footer-content {
@@ -1182,7 +1198,7 @@
 
   .footer-menu {
     padding: 0;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 
@@ -1205,6 +1221,12 @@
 
   .bottom-footer {
     padding-top: 1rem;
+    font-size: 8.4px;
+  }
+
+  .bottom-socials a {
+    font-size: 25px;
+    padding: 3px;
   }
 
 }

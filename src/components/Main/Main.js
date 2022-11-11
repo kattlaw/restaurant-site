@@ -51,7 +51,6 @@ const Main = () => {
     //gsap animation
     const title = useRef(null);
     const subtitle = useRef(null);
-    const menuRef = useRef(null);
  
     useEffect(() => {
        
@@ -145,6 +144,12 @@ const Main = () => {
    
     }, []);
 
+    //overlay menu GSAP animation 
+    
+    const menuRef = useRef(null);
+    const reserveRef = useRef(null);
+    const logoRef = useRef(null);
+
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
 
@@ -166,7 +171,7 @@ const Main = () => {
                 y: 0,       
             });
 
-           timeline.from(".overlay-reserve", {
+           timeline.from(reserveRef.current, {
                 duration: 0.5,
                 delay: 0.2,
                 opacity: 0,
@@ -174,7 +179,7 @@ const Main = () => {
                 y: 0,
             });
 
-            timeline.from(".overlay-logo", {
+            timeline.from(logoRef.current, {
                 duration: 0.3,
                 delay: 0.1,
                 opacity: 0,
@@ -218,8 +223,8 @@ const Main = () => {
                             <li><a href="#main">Menu</a></li>
                             <li><a href="#main">Gallery</a></li>
                         </ul>
-                        <button className="overlay-reserve" onClick={openReserve}>Book a Table</button>
-                        <div className="overlay-logo">
+                        <button className="overlay-reserve" ref={reserveRef} onClick={openReserve}>Book a Table</button>
+                        <div className="overlay-logo" ref={logoRef}>
                             <span>ZIA </span> MIA
                         </div>
                     </div>
@@ -282,23 +287,23 @@ const Main = () => {
                     <div className="menu">
                         <div>
                             <img src={takeout} className="takeout" alt="pasta" />
-                            <div className="image-overlay" id="takeout">Takeout <br /> Menu</div>
+                            <div className="image-overlay" id="takeout">Takeout<br />Menu</div>
                         </div>
                         <div>
                             <img src={drinks} className="happyhour" alt="drinks" />
-                            <div className="image-overlay" id="happy">Happy <br /> Hour</div>
+                            <div className="image-overlay" id="happy">Happy<br />Hour</div>
                         </div>
                         <div>
                             <img src={cocktails} className="drinks" alt="cocktails" />
-                            <div className="image-overlay" id="drinks">Drink <br /> Menu</div>
+                            <div className="image-overlay" id="drinks">Drink<br />Menu</div>
                         </div>
                         <div>
                             <img src={dining} className="dining" alt="food on table" />
-                            <div className="image-overlay" id="dining">Dining <br /> Menu</div>
+                            <div className="image-overlay" id="dining">Dining<br />Menu</div>
                         </div>
                         <div>
                             <img src={dessert} className="dessert" alt="tiramisu" />
-                            <div className="image-overlay" id="dessert">Dessert <br /> Menu</div>
+                            <div className="image-overlay" id="dessert">Dessert<br />Menu</div>
                         </div>
                         <div className="cannoli">
                             <img src={cannoli} className="cannoli" alt="cannoli" />
@@ -320,14 +325,14 @@ const Main = () => {
                                 <li>Gallery</li>
                               </ul>
                               <div className="footer-info">
-                                2122 South Main
+                                    2122 South Main
                                 <span>Boston, MA 22201</span>
-                                Copyright 2022
+                                    Copyright 2022
                                 <button className="footer-button" href="#main">
-                               Order
+                                    Order
                                 </button>
                                 <button className="footer-button" href="#" onClick={openReserve}>
-                               Reserve
+                                    Reserve 
                                 </button>
                             </div>
                             </div>
@@ -351,8 +356,7 @@ const Main = () => {
                     <Modal.Body>
                     </Modal.Body>
                 </Modal>
-                )}
-            
+                )}    
         </section>    
     )
 }

@@ -136,7 +136,7 @@ const onSubmit = (data) => {
                 />
                 {errors.Email?.type === "required" && <span className="required">Email is required</span>}        
                 
-                  <span class="date-time">Date
+                  <span className="date-time">Date
                   <input
                     className="date-control"
                     type="date"
@@ -146,7 +146,7 @@ const onSubmit = (data) => {
                     })}
                   /> 
                 </span>
-                <span class="date-time">Time
+                <span className="date-time">Time
                   <select 
                     className="select-time"
                     name="Time"
