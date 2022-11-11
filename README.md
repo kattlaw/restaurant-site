@@ -20,6 +20,8 @@ Features:
   -React Hooks
   -Mobile Responsiveness
   -Different designs/layouts for Desktop and Mobile views
+  
+  
 <img width="1128" alt="Screen Shot 2022-11-11 at 10 22 45 AM" src="https://user-images.githubusercontent.com/97987865/201371710-6af6666a-3e0e-44c6-b9d8-cae853857c05.png">
 <img width="1128" alt="Screen Shot 2022-11-11 at 10 23 15 AM" src="https://user-images.githubusercontent.com/97987865/201371741-c00e3a9e-5c07-4610-be5a-2d646e567c73.png">
 <img width="1128" alt="Screen Shot 2022-11-11 at 10 23 44 AM" src="https://user-images.githubusercontent.com/97987865/201371750-fdc16999-7ea7-4d38-b1b5-9e6c4c9275d4.png">
