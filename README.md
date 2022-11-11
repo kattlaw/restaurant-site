@@ -2,6 +2,8 @@
 
 ## This site was built with React and vanilla CSS
 
+http://zia-mia.netlify.app
+
 #### By Katherine Law
 
 #### A one-page application to display design and programming skills in a "real-world" scenario
