@@ -36,7 +36,6 @@ The purpose of the site is to display design and programming skills in a "real-w
 
 Copyright (c) 2022 Katherine Law
 
-![Screen Shot 2022-11-11 at 10 22 45 AM](https://user-images.githubusercontent.com/97987865/201380191-bf311343-c390-463c-9ea6-06dd04d5f950.jpeg)
 
 
 <img width="1128" alt="Screen Shot 2022-11-11 at 10 23 15 AM" src="https://user-images.githubusercontent.com/97987865/201380324-df6f2b18-01c8-4971-b6d0-c231f3edf286.png">
