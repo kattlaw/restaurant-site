@@ -27,13 +27,6 @@ http://zia-mia.netlify.app
 * Mobile Responsiveness
 * Different layouts/design based upon desktop/mobile views
 
-### This site was built with React and vanilla CSS.
-
-The purpose of the site is to display design and programming skills in a "real-world" application. 
-
-
-
-
 
 
 Copyright (c) 2022 Katherine Law
